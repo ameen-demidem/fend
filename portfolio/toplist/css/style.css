@@ -1,0 +1,70 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0px solid red !important;
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-weight: 100;
+    src: url(file:///home/ameen/Documents/Web%20Developer/Udacity/portfolio/toplist/fonts/gotham-100.ttf);
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-weight: 300;
+    src: url(file:///home/ameen/Documents/Web%20Developer/Udacity/portfolio/toplist/fonts/gotham-300.ttf);
+}
+
+body {
+/*    font-family: "Gotham", "Lato", sans-serif; */
+    font-family: "Lato", sans-serif;
+    color: #747704;
+    font-weight: 300;
+}
+
+.title-logo {
+    margin-top: 20px
+}
+
+.title-super {
+    font-size: 60px;
+}
+
+.subtitle-super {
+    font-size: 35px;
+}
+
+.text-muted {
+    color: #bcbbbb;
+}
+
+.text-thin {
+    font-weight: 100;
+}
+
+.text-indented {
+    margin-left: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.margin-bottom-extra {
+    margin-bottom: 20px;
+}
+
+.separation-line {
+    border-top: solid #bcbbbb;
+}
+
+.height-controlled {
+    max-height: 200px;
+}
+
+.width-controlled {
+    max-width: 980px;
+}

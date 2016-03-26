@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My First App</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:100,300'
+        rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container width-controlled">
+
+    <div class="row">
+      <div class="col-md-6">
+        <img class="title-logo" src="images/udacity-logo.jpg"
+             alt="Page logo">
+      </div>
+      <div class="col-md-6 text-right text-uppercase">
+        <h1 class="title-super text-thin">Jane Doette</h1>
+        <h4>Front-end Ninja</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="separation-line">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <img class="img-responsive" src="images/main.png"
+             alt="Main image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-muted text-indented text-bold subtitle-super">Featured Work</h2>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-4 margin-bottom-extra">
+        <img class="img-responsive center-block height-controlled" src="images/appify.png"
+             alt="" data-toggle="modal" data-target="#project1">
+        <h3 class="text-uppercase text-bold subtitle-super">Appify</h3>
+        <a href="http://github.com/">Link to project</a>
+      </div>
+
+      <div class="col-md-4 margin-bottom-extra">
+        <img class="img-responsive center-block height-controlled" src="images/sunflower.png"
+             alt="" data-toggle="modal" data-target="#project2">
+        <h3 class="text-uppercase text-bold subtitle-super">Sunflower</h3>
+        <a href="http://github.com/">Link to project</a>
+      </div>
+
+      <div class="col-md-4 margin-bottom-extra">
+        <img class="img-responsive center-block height-controlled" src="images/bokeh.png"
+             alt="" data-toggle="modal" data-target="#project3">
+        <h3 class="text-uppercase text-bold subtitle-super">Bokeh</h3>
+        <a href="http://github.com/">Link to project</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="project1" tabindex="-1"
+       role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel1">
+            Appify App Page
+          </h4>
+        </div>
+        <div class="modal-body">
+          <img class="img-responsive" src="images/appify.png" alt="">
+          This was my first project in this nano-degree. I learnt the basics of HTML and CSS,
+          and was introduced to the notions of responsive web design with Bootstrap.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"
+                  data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="project2" tabindex="-1"
+       role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel2">
+            Sunflower App Page
+          </h4>
+        </div>
+        <div class="modal-body">
+          <img class="img-responsive" src="images/sunflower.png" alt="">
+          This was my second project in this nano-degree. I learnt the basics of Javascript,
+          object oriented programming, and was introduced to jQuery and GitHub.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"
+                  data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="project3" tabindex="-1"
+       role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel3">
+            Bokeh App Page
+          </h4>
+        </div>
+        <div class="modal-body">
+          <img class="img-responsive" src="images/bokeh.png" alt="">
+          This was my third project in this nano-degree. I learnt the basics of AJAX and Backbone.js,
+          and was introduced to Javascript design patterns.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"
+                  data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
