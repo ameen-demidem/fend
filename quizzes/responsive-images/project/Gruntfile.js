@@ -13,14 +13,55 @@ module.exports = function(grunt) {
       dev: {
         options: {
           engine: 'im',
-          sizes: [{
-            /*
-            Change these:
-            */
-            width: 1600,
-            suffix: '-large',
-            quality: 30
-          }]
+          sizes: [
+            {
+              width: 300,
+              separator: '-',
+              name: 'small',
+              suffix: '-ldpi',
+              quality: 30
+            },
+
+            {
+              width: 600,
+              separator: '-',
+              name: 'medium',
+              suffix: '-ldpi',
+              quality: 30
+            },
+
+            {
+              width: 800,
+              separator: '-',
+              name: 'large',
+              suffix: '-ldpi',
+              quality: 30
+            },
+
+            {
+              width: 600,
+              separator: '-',
+              name: 'small',
+              suffix: '-hdpi',
+              quality: 30
+            },
+
+            {
+              width: 1200,
+              separator: '-',
+              name: 'medium',
+              suffix: '-hdpi',
+              quality: 30
+            },
+
+            {
+              width: 1600,
+              separator: '-',
+              name: 'large',
+              suffix: '-hdpi',
+              quality: 30
+            }
+          ]
         },
 
         /*
@@ -57,7 +98,7 @@ module.exports = function(grunt) {
       dev: {
         files: [{
           expand: true,
-          src: 'images_src/fixed/*.{gif,jpg,png}',
+          src: 'images_src/fixed/*.{gif,jpg,png,svg}',
           dest: 'images/',
           flatten: true,
         }]
