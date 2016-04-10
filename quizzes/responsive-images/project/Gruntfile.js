@@ -15,42 +15,16 @@ module.exports = function(grunt) {
           engine: 'im',
           sizes: [
             {
-              width: 300,
+              width: 500,
               separator: '-',
               name: 'small',
-              suffix: '-ldpi',
               quality: 30
             },
 
             {
-              width: 600,
+              width: 1000,
               separator: '-',
               name: 'medium',
-              suffix: '-ldpi',
-              quality: 30
-            },
-
-            {
-              width: 800,
-              separator: '-',
-              name: 'large',
-              suffix: '-ldpi',
-              quality: 30
-            },
-
-            {
-              width: 600,
-              separator: '-',
-              name: 'small',
-              suffix: '-hdpi',
-              quality: 30
-            },
-
-            {
-              width: 1200,
-              separator: '-',
-              name: 'medium',
-              suffix: '-hdpi',
               quality: 30
             },
 
@@ -58,9 +32,8 @@ module.exports = function(grunt) {
               width: 1600,
               separator: '-',
               name: 'large',
-              suffix: '-hdpi',
               quality: 30
-            }
+            },
           ]
         },
 
