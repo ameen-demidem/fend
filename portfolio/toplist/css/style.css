@@ -29,12 +29,21 @@ body {
     margin-top: 20px
 }
 
-.title-super {
-    font-size: 60px;
+h1 {
+    font-size: 4em;
 }
 
-.subtitle-super {
-    font-size: 35px;
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .text-muted {
@@ -47,10 +56,6 @@ body {
 
 .text-indented {
     margin-left: 10px;
-}
-
-.text-bold {
-    /*font-weight: bold;*/
 }
 
 .margin-bottom-extra {
