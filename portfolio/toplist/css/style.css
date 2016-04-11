@@ -67,11 +67,11 @@ h4 {
     margin-bottom: 25px;
 }
 
-.height-controlled {
+.height-limited {
     max-height: 200px;
 }
 
-.width-controlled {
+.width-limited {
     max-width: 980px;
 }
 
