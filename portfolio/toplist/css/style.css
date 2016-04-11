@@ -21,7 +21,7 @@
 body {
     font-family: "Gotham", "Lato", sans-serif;
     /*font-family: "Lato", sans-serif;*/
-    color: #747704;
+    color: #5d614e;
     font-weight: 300;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .text-bold {
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .margin-bottom-extra {
