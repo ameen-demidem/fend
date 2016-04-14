@@ -18,8 +18,7 @@
 
     <div class="row title-row">
       <div class="col-xs-3 col-ms-4">
-        <img class="img-responsive title-logo" src="images/udacity-logo.jpg"
-             alt="Page logo">
+        <img class="img-responsive title-logo" src="images/udacity-logo.jpg" alt="Page logo">
       </div>
       <div class="col-xs-9 col-ms-8 text-right text-uppercase">
         <h1 class="text-thin mock-font">Jane Doette</h1>
@@ -32,7 +31,11 @@
 
     <div class="row">
       <div class="col-md-12">
-        <img class="img-responsive" src="images/main.png" alt="Main image">
+        <img class="img-responsive" src="images/html-large-2x.jpg" alt="HTML code"
+             sizes="(max-width: 480px) 450px, (max-width: 730px) 700px, 100%"
+             srcset="images/html-large-2x.jpg 1900w, images/html-large-1x.jpg 950w,
+                     images/html-medium-2x.jpg 1400w, images/html-medium-1x.jpg 700w,
+                     images/html-small-2x.jpg 900w, images/html-small-1x.jpg 450w">
       </div>
     </div>
 
@@ -44,22 +47,40 @@
 
     <div class="row text-center">
       <div class="col-sm-6 col-md-4 margin-bottom-extra">
-        <img class="img-responsive center-block height-limited" src="images/appify.png"
-             alt="" data-toggle="modal" data-target="#project1">
+        <picture>
+          <source srcset="images/appify-small-1x.jpg 1x, images/appify-small-2x.jpg 2x" media="(max-width: 399px)">
+          <source srcset="images/appify-medium-1x.jpg 1x, images/appify-medium-2x.jpg 2x" media="(max-width: 599px)">
+          <source srcset="images/appify-large-1x.jpg 1x, images/appify-large-2x.jpg 2x" media="(min-width: 600px)">
+          <img class="img-responsive center-block app-picture"
+               src="http://www.conductor.com/blog/wp-content/uploads/sites/5/2014/11/broken-link-meme.png"
+               alt="" data-toggle="modal" data-target="#project1">
+        </picture>
         <h2 class="text-uppercase mock-font">Appify</h2>
         <a href="https://github.com/udacity/Appify/">https://github.com/udacity/Appify/</a>
       </div>
 
       <div class="col-sm-6 col-md-4 margin-bottom-extra">
-        <img class="img-responsive center-block height-limited" src="images/sunflower.png"
-             alt="" data-toggle="modal" data-target="#project2">
+        <picture>
+          <source srcset="images/sunflower-small-1x.jpg 1x, images/sunflower-small-2x.jpg 2x" media="(max-width: 399px)">
+          <source srcset="images/sunflower-medium-1x.jpg 1x, images/sunflower-medium-2x.jpg 2x" media="(max-width: 599px)">
+          <source srcset="images/sunflower-large-1x.jpg 1x, images/sunflower-large-2x.jpg 2x" media="(min-width: 600px)">
+          <img class="img-responsive center-block app-picture"
+               src="http://www.conductor.com/blog/wp-content/uploads/sites/5/2014/11/broken-link-meme.png"
+               alt="" data-toggle="modal" data-target="#project2">
+        </picture>
         <h2 class="text-uppercase mock-font">Sunflower</h2>
         <a href="https://github.com/udacity/Sunflower/">https://github.com/udacity/Sunflower/</a>
       </div>
 
       <div class="col-sm-6 col-md-4 margin-bottom-extra">
-        <img class="img-responsive center-block height-limited" src="images/bokeh.png"
-             alt="" data-toggle="modal" data-target="#project3">
+        <picture>
+          <source srcset="images/bokeh-small-1x.jpg 1x, images/bokeh-small-2x.jpg 2x" media="(max-width: 399px)">
+          <source srcset="images/bokeh-medium-1x.jpg 1x, images/bokeh-medium-2x.jpg 2x" media="(max-width: 599px)">
+          <source srcset="images/bokeh-large-1x.jpg 1x, images/bokeh-large-2x.jpg 2x" media="(min-width: 600px)">
+          <img class="img-responsive center-block app-picture"
+               src="http://www.conductor.com/blog/wp-content/uploads/sites/5/2014/11/broken-link-meme.png"
+               alt="" data-toggle="modal" data-target="#project3">
+        </picture>
         <h2 class="text-uppercase mock-font">Bokeh</h2>
         <a href="https://github.com/udacity/Bokeh/">https://github.com/udacity/Bokeh/</a>
       </div>
@@ -78,7 +99,14 @@
           </h4>
         </div>
         <div class="modal-body">
-          <img class="img-responsive" src="images/appify.png" alt="">
+          <picture>
+            <source srcset="images/appify-small-1x.jpg 1x, images/appify-small-2x.jpg 2x" media="(max-width: 399px)">
+            <source srcset="images/appify-medium-1x.jpg 1x, images/appify-medium-2x.jpg 2x" media="(max-width: 599px)">
+            <source srcset="images/appify-large-1x.jpg 1x, images/appify-large-2x.jpg 2x" media="(min-width: 600px)">
+            <img class="img-responsive center-block app-picture-modal"
+                 src="http://www.conductor.com/blog/wp-content/uploads/sites/5/2014/11/broken-link-meme.png"
+                 alt="" data-toggle="modal" data-target="#project1">
+          </picture>
           This was my first project in this nano-degree. I learnt the basics of HTML and CSS,
           and was introduced to the notions of responsive web design with Bootstrap.
         </div>
@@ -102,7 +130,13 @@
           </h4>
         </div>
         <div class="modal-body">
-          <img class="img-responsive" src="images/sunflower.png" alt="">
+          <picture>
+            <source srcset="images/sunflower-small-1x.jpg 1x, images/sunflower-small-2x.jpg 2x" media="(max-width: 399px)">
+            <source srcset="images/sunflower-medium-1x.jpg 1x, images/sunflower-medium-2x.jpg 2x" media="(max-width: 599px)">
+            <source srcset="images/sunflower-large-1x.jpg 1x, images/sunflower-large-2x.jpg 2x" media="(min-width: 600px)">
+            <img class="img-responsive center-block app-picture-modal"
+                 src="http://www.conductor.com/blog/wp-content/uploads/sites/5/2014/11/broken-link-meme.png" alt="">
+          </picture>
           This was my second project in this nano-degree. I learnt the basics of Javascript,
           object oriented programming, and was introduced to jQuery and GitHub.
         </div>
@@ -126,7 +160,13 @@
           </h4>
         </div>
         <div class="modal-body">
-          <img class="img-responsive" src="images/bokeh.png" alt="">
+          <picture>
+            <source srcset="images/bokeh-small-1x.jpg 1x, images/bokeh-small-2x.jpg 2x" media="(max-width: 399px)">
+            <source srcset="images/bokeh-medium-1x.jpg 1x, images/bokeh-medium-2x.jpg 2x" media="(max-width: 599px)">
+            <source srcset="images/bokeh-large-1x.jpg 1x, images/bokeh-large-2x.jpg 2x" media="(min-width: 600px)">
+            <img class="img-responsive center-block app-picture-modal"
+                 src="http://www.conductor.com/blog/wp-content/uploads/sites/5/2014/11/broken-link-meme.png" alt="">
+          </picture>
           This was my third project in this nano-degree. I learnt the basics of AJAX and Backbone.js,
           and was introduced to Javascript design patterns.
         </div>

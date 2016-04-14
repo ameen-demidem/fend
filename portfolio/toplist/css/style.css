@@ -67,10 +67,6 @@ h4 {
     margin-bottom: 25px;
 }
 
-.height-limited {
-    max-height: 200px;
-}
-
 .width-limited {
     max-width: 980px;
 }
@@ -103,7 +99,7 @@ h4 {
 
 @media screen and (max-width: 505px) {
     h1 {
-    font-size: 3em;
+        font-size: 3em;
     }
 
     h2 {
@@ -121,10 +117,44 @@ h4 {
 
 @media screen and (max-width: 440px) {
     h1 {
-    font-size: 2.5em;
+        font-size: 2.5em;
     }
 
     h2 {
         font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 2.1em;
+    }
+}
+
+.app-picture {
+    width: 350px;
+}
+
+.app-picture-modal {
+    width: 600px;
+}
+
+@media screen and (max-width: 599px) {
+    .app-picture {
+        width: 275px;
+    }
+
+    .app-picture-modal {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .app-picture {
+        width: 200px;
+    }
+
+    .app-picture-modal {
+        width: 300px;
     }
 }
