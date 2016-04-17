@@ -3,7 +3,7 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    outline: 0px solid red !important;
+    /*outline: 1px solid red !important;*/
 }
 
 @font-face {
@@ -57,7 +57,7 @@ h4 {
     margin-left: 10px;
 }
 
-.margin-bottom-extra {
+.app-div {
     margin-bottom: 20px;
 }
 
@@ -67,7 +67,8 @@ h4 {
     margin-bottom: 25px;
 }
 
-.width-limited {
+.root {
+    /* The page's max width is 950px + Bootstrap's 30px padding */
     max-width: 980px;
 }
 
