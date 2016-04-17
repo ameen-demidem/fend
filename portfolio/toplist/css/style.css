@@ -84,6 +84,12 @@ h4 {
     font-family: "Gotham";
 }
 
+.modal-body p {
+    margin: 15px 10px;
+    font-weight: bold;
+    text-align: justify;
+}
+
 @media screen and (max-width: 575px) {
     h1 {
     font-size: 3.5em;
@@ -95,6 +101,10 @@ h4 {
 
     h3 {
         font-size: 1em;
+    }
+
+    .modal-body p {
+        font-weight: initial;
     }
 }
 
@@ -138,6 +148,10 @@ h4 {
 
 .app-picture-modal {
     width: 600px;
+}
+
+.modal-title {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 599px) {
