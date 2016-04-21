@@ -153,6 +153,10 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
+
+  // We'll keep track of all the infoWindows we created so that we only keep one open at any time
+  var infoWindows = [];
+
   function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
@@ -174,9 +178,13 @@ function initializeMap() {
     var infoWindow = new google.maps.InfoWindow({
       content: name
     });
+    infoWindows.push(infoWindow);
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
+      for (w of infoWindows) {
+        w.close();
+      }
       infoWindow.open(map, marker); // your code goes here!
     });
 
