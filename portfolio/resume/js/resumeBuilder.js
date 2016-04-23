@@ -58,16 +58,17 @@ var work = {
       "dates": "December 2011 - May 2015",
       "description": "HP Enterprise solutions implementation and on-site hardware support"
     }
-  ]
+  ],
+  "display": function() {
+    work.jobs.forEach(function(w) {
+      $("#workExperience").append(HTMLworkStart);
+      $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", w.employer) + HTMLworkTitle.replace("%data%", w.title));
+      $(".work-entry:last").append(HTMLworkDates.replace("%data%", w.dates));
+      $(".work-entry:last").append(HTMLworkLocation.replace("%data%", w.location));
+      $(".work-entry:last").append(HTMLworkDescription.replace("%data%", w.description));
+    });
+  }
 };
-
-work.jobs.forEach(function(w) {
-  $("#workExperience").append(HTMLworkStart);
-  $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", w.employer) + HTMLworkTitle.replace("%data%", w.title));
-  $(".work-entry:last").append(HTMLworkDates.replace("%data%", w.dates));
-  $(".work-entry:last").append(HTMLworkLocation.replace("%data%", w.location));
-  $(".work-entry:last").append(HTMLworkDescription.replace("%data%", w.description));
-});
 
 var education = {
   "schools": [
@@ -126,6 +127,7 @@ projects.display = function() {
 }
 
 bio.display();
+work.display();
 projects.display();
 
 $("#mapDiv").append(googleMap);
