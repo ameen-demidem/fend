@@ -1,3 +1,40 @@
+var bio = {
+  "name": "Ameen Demidem",
+  "role": "Front-End Web Developer",
+  "welcomeMessage": "Oh you dear visitor, be welcome !",
+  "contacts": {
+    "mobile": "555-555-5555",
+    "email": "anonymous-coward@mail.com",
+    "github": "ameen-demidem",
+    "location": "Victoria, BC, Canada"
+  },
+  "biopic": "images/ameen.png",
+  "skills": ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+  "display": function() {
+    $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+    $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+
+    var textToReplace = {
+      "mobile": HTMLmobile, "email": HTMLemail, "github": HTMLgithub,
+      "twitter": HTMLtwitter, "blog": HTMLblog, "location": HTMLlocation
+    };
+
+    for (var c in bio.contacts)
+      if (c in textToReplace) $("#topContacts").append(textToReplace[c].replace("%data%", bio.contacts[c]));
+
+    $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+    $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+
+    if (bio.skills.length != 0) {
+      $("#header").append(HTMLskillsStart);
+      for (var i=0; i < bio.skills.length; i++) {
+        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+      };
+    };
+
+  }
+};
+
 var work = {
   "jobs": [
     {
@@ -32,19 +69,6 @@ work.jobs.forEach(function(w) {
   $(".work-entry:last").append(HTMLworkDescription.replace("%data%", w.description));
 });
 
-var bio = {
-  "name": "Ameen Demidem",
-  "role": "Front-End Web Developer",
-  "welcomeMsg": "Oh you dear visitor, be welcome !",
-  "contacts": {
-    "email": "ameen.demidem@gmail.com",
-    "github": "ameen-demidem",
-    "location": "Victoria, BC, Canada"
-  },
-  "picture": "images/ameen.png",
-  "skills": ["HTLM", "CSS", "Bootstrap", "JavaScript", "jQuery"]
-};
-
 var education = {
   "schools": [
     {
@@ -66,14 +90,6 @@ var education = {
   ]
 };
 
-$("#header").prepend(HTMLheaderName.replace("%data%", "Ameen Demidem"));
-
-if (bio.skills.length != 0) {
-  $("#header").append(HTMLskillsStart);
-  for (var i=0; i < bio.skills.length; i++) {
-    $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
-  }
-}
 
 $(document).click(function(loc) { logClicks(loc.pageX, loc.pageY); });
 
@@ -109,6 +125,7 @@ projects.display = function() {
   }
 }
 
+bio.display();
 projects.display();
 
 $("#mapDiv").append(googleMap);
