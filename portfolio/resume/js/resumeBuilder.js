@@ -104,20 +104,54 @@ var education = {
       "location": "Algiers, Algeria",
       "degree": "Bachelor",
       "majors": ["CS"],
-      "dates": "September 1998 - December 2003",
+      "dates": "1998 - 2003",
+      "url": "http://www.esi.dz"
+    },
+    {
+      "name": "Ecole Nationale Superieure d'Informatique",
+      "location": "Algiers, Algeria",
+      "degree": "Bachelor",
+      "majors": ["CS"],
+      "dates": "1998 - 2003",
       "url": "http://www.esi.dz"
     }
   ],
-
   "onlineCourses": [
     {
       "title": "Front-End Web Developer",
       "school": "Udacity.com",
-      "dates": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+      "dates": "2016",
+      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    },
+    {
+      "title": "Front-End Web Developer",
+      "school": "Udacity.com",
+      "dates": "2016",
+      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }
-  ]
-};
+  ],
+  "display": function() {
+    for (s of education.schools) {
+      $("#education").append(HTMLschoolStart);
+      $(".education-entry:last").append(HTMLschoolName.replace("%data%", s.name)
+                                      + HTMLschoolDegree.replace("%data%", s.degree));
+      $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", s.location));
+      $(".education-entry:last").append(HTMLschoolDates.replace("%data%", s.dates));
+      for (m of s.majors) $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", m));
+      };
 
+    if (education.onlineCourses.length != 0) {
+      $("#education").append(HTMLonlineClasses);
+      for (o of education.onlineCourses) {
+        $("#education").append(HTMLschoolStart);
+        $(".education-entry:last").append(HTMLonlineTitle.replace("%data%", o.title)
+                                        + HTMLonlineSchool.replace("%data%", o.school));
+        $(".education-entry:last").append(HTMLonlineDates.replace("%data%", o.dates));
+        $(".education-entry:last").append(HTMLonlineURL.replace("%data%", o.url));
+      };
+    };
+  }
+};
 
 $(document).click(function(loc) { logClicks(loc.pageX, loc.pageY); });
 
@@ -136,5 +170,6 @@ function inName(fullName) {
 bio.display();
 work.display();
 projects.display();
+education.display();
 
 $("#mapDiv").append(googleMap);
