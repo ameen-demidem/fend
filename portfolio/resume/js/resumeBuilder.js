@@ -70,6 +70,33 @@ var work = {
   }
 };
 
+var projects = {
+  "projects": [
+    {
+      "title": "Top List",
+      "dates": "April 2016",
+      "description": "Replicate a mock featured-work pdf file in HTML/CSS",
+      "images": ["http://lorempixel.com/300/200", "http://lorempixel.com/301/200"]
+    },
+    {
+      "title": "Online Resume",
+      "dates": "May 2016",
+      "description": "Build a a online resume from an HTML template with JavaScript/jQuery",
+      "images": ["http://lorempixel.com/302/200", "http://lorempixel.com/303/200"]
+
+    }
+  ],
+  "display": function() {
+    for (p of projects.projects) {
+      $("#projects").append(HTMLprojectStart);
+      $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", p.title));
+      $(".project-entry:last").append(HTMLprojectDates.replace("%data%", p.dates));
+      $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", p.description));
+      for (img of p.images) $(".project-entry:last").append(HTMLprojectImage.replace("%data%", img));
+    };
+  }
+};
+
 var education = {
   "schools": [
     {
@@ -105,26 +132,6 @@ function inName(fullName) {
   return initial + firstName + " " + lastName;
 }
 
-var projects = [
-  {
-    "title": "Top List",
-    "dates": "April 2016",
-    "description": "Replicate a mock featured-work pdf file in HTML/CSS",
-    "images": []
-    // "images": ["http://lorempixel.com/300/200", "http://lorempixel.com/301/200"]
-  }
-];
-
-projects.display = function() {
-  for (p of projects) {
-    $("#projects").append(HTMLprojectStart);
-    // console.log(HTMLprojectTitle.replace("%data%", p.title));
-    $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", p.title));
-    $(".project-entry:last").append(HTMLprojectDates.replace("%data%", p.dates));
-    $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", p.description));
-    for (img of p.images) $(".project-entry:last").append(HTMLprojectImage.replace("%data%", img));
-  }
-}
 
 bio.display();
 work.display();
