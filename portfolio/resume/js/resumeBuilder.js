@@ -20,7 +20,10 @@ var bio = {
     };
 
     for (var c in bio.contacts)
-      if (c in textToReplace) $("#topContacts").append(textToReplace[c].replace("%data%", bio.contacts[c]));
+      if (c in textToReplace) {
+        $("#topContacts").append(textToReplace[c].replace("%data%", bio.contacts[c]));
+        $("#footerContacts").append(textToReplace[c].replace("%data%", bio.contacts[c]));
+      };
 
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
